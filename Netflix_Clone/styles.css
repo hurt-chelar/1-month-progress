@@ -1,0 +1,86 @@
+@import url('https://fonts.cdnfonts.com/css/netflix-font');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+header {
+    height: 700px;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    padding: 20px 50px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+nav a {
+    color: #fff;
+    background-color: #EC0D18;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.hero-section {
+    margin: auto;
+    margin-top: 130px;
+    width: 630px;
+    text-align: center;
+}
+
+.hero-section h1{
+    font-size: 50px;
+}
+
+.hero-section h2 {
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+h3 {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form #email-input {
+    width: 500px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+form #input-label {
+    background-color: #e50914;
+    padding: 14px 10px 20px;
+    margin-left: -4px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
