@@ -1,0 +1,346 @@
+
+*{
+    padding: 0 ;
+    margin : 0  ; 
+    box-sizing: border-box ; 
+
+} 
+img{
+    max-width:100% ; 
+
+}
+
+
+body{
+    font-family: "Helvetica Neue" , Helvetica, Arial, sans-serif;
+    background-color: black;
+    color:#fff ; 
+
+}
+
+header{
+
+
+    display: grid ;
+    grid-template-columns: 1fr 1fr ; 
+    padding: 26px 56px  ;
+    position: absolute ;  
+    z-index: 5;
+    /* higher the index higher the position */
+    width: 100% ; 
+    
+}
+
+
+header a.logo{
+    display: block ; 
+
+
+}
+
+header .logo svg{
+    fill : #e50914 ; 
+    height: 37px ; 
+
+    
+}
+
+header div+div {
+    text-align: right ; 
+
+}
+
+header a.button {
+    display: inline-block;  
+    background-color:#e50914;
+    color : #fff ; 
+    text-decoration: none ; 
+    /* remove the underline  */
+
+    padding: 7px 17px ; 
+    border-radius: 3px; 
+    /* this makes the rounded corners  */
+    
+}
+
+
+
+
+header select{
+    background: transparent;
+    color: #fff ; 
+    padding : 6px 0 6px 20px ; 
+    border-radius: 3px ; 
+
+
+}
+
+header div.select{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+header div.select svg {
+    height: 20px;
+    fill: #fff; 
+    position: absolute ; 
+    margin-top: 5px ;
+    margin-left: 4px ;  
+
+
+}
+
+div.splash {
+    position: relative;    
+}
+
+
+div.splash div.gradient{
+
+    background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+    position: absolute ;
+    inset: 0  ;
+}
+
+div.splash div.background img{
+
+    max-width:100% ;
+    opacity: 0.6 ; 
+
+
+}
+
+div.splash div.content {
+    max-width: 655px ; 
+    position: absolute ;
+    inset :  0 ; 
+/* trick to get it in the middle{ middle bar }   */
+    left: 50%  ; 
+    margin-left: -327.5px ; 
+
+    display: grid ; 
+    align-items: center; 
+    text-align: center;
+ 
+}
+
+div.splash h1 , div.splash h2 , div.splash h3 { 
+    font-weight: normal ; 
+     
+}
+
+
+div.splash h1 {
+    font-size: 3.215rem ; 
+    font-weight: bold;
+
+}
+
+div.splash h2{
+    font-size: 1.625rem ; 
+    margin-top: 13px ;
+    margin-bottom: 29px ; 
+
+
+}
+
+div.splash h3 {
+    font-size: 1.2rem;
+}
+
+
+div.splash form {
+    position: relative ; 
+    display: grid ; 
+    margin-top : 20px ; 
+
+    grid-template-columns: 1fr max-content ; 
+
+}
+
+div.splash input{
+    padding: 15px 10px   ; 
+    font-size : 1.2rem  ; 
+    width : 100%; 
+
+
+
+}
+
+div.splash input ~ span{
+    position: absolute ; 
+    left: 12px ; 
+    top: 19px  ; 
+    z-index: 3 ;
+    color : #ddd ;
+    transition: 0.15s ease ;  
+    pointer-events: none ;
+    /* to fix thtat issue of when pressing on the text the thing does not move up  */
+}
+
+div.splash input:focus{
+    padding-top: 19px ;
+    padding-bottom: 11px ; 
+
+}
+
+
+div.splash input:focus ~ span{ 
+    top: 4px ; 
+    font-size: 0.8rem ; 
+}
+
+div.splash button{
+    font-size : 1.625rem  ; 
+    padding: 12.5px 26px ; 
+    background-color:#e50914;
+    color  : #fff ; 
+    border : 0 ; 
+
+}
+
+
+section {
+    display: grid ; 
+    grid-template-columns: 1fr 1fr ; 
+    gap : 46px ; 
+    padding : 70px 35px  ; 
+    align-items: center ; 
+    border-top:5px solid #222;
+
+
+
+}
+
+
+section div.texts h1{
+    font-size : 3.125rem ; 
+    margin-bottom: 8px ; 
+
+}
+
+section div.texts p{
+    font-size  : 1.626rem ; 
+
+}
+
+
+.media {
+    position: relative ; 
+}
+/* This is another method for going there other than using the div method  */
+.media.s1 img{
+    width:400px ; 
+     
+}
+
+.media.s1 video{
+    width: 290px ; 
+    position : absolute ; 
+    top: 62px ; 
+    left:52px ; 
+
+}
+
+/* to change the section in opp way 2 time automitcally rather than wiriting the code again 
+*/
+
+section:nth-child(even) div.texts {
+    order : 2 ; 
+
+    
+}
+
+section div.download{
+    border: 2px solid #666;
+    border-radius:15px  ;
+    padding : 10px ;  
+    height: 95px ;
+    display: grid ; 
+    grid-template-columns: max-content 1fr max-content; 
+    text-align : center ; 
+    align-items: center ; 
+    position:absolute; 
+    bottom: 20px ;  
+    width:280px ; 
+    background-color:black  ;
+    left: 50% ;
+    gap:5px ;  
+    margin-left: -135px ; 
+
+}
+
+section div.download img {
+    height: 75px  ; 
+    width: auto ; 
+
+
+}
+
+.media.s3 img{
+    width:400px ; 
+    position: relative ; 
+    z-index:5 ; 
+
+     
+}
+
+.media.s3 video{
+    width: 250px ; 
+    position : absolute ; 
+    top: 36px ; 
+    left:72px ; 
+
+}
+
+section.last{
+    border-bottom: 8px solid #222 ;
+
+
+}
+
+div.faq{
+    padding:70px 30px ; 
+
+}
+
+div.faq h1{
+    font-size: 3.125rem ; 
+    text-align:center ; 
+}
+
+div.questions{
+    max-width:635px ; 
+    margin: 0 auto ; 
+
+}
+
+div.question{ 
+    position:relative ;  
+    background-color:#303030 ; 
+
+}
+
+div.question svg{ 
+    width: 30px ; 
+    height : 25px ; 
+    right: 25px ; 
+    position: absolute; 
+    top : 17px ; 
+     
+}
+
+div.question .header{
+    display: block; 
+    padding : 20px 30px ; 
+    border-bottom: 1px solid black;
+    cursor : pointer; 
+
+
+
+}
+
+div.question div.answer{
+    padding:30px  ; 
+}
