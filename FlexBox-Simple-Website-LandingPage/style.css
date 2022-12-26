@@ -1,0 +1,47 @@
+*{
+    margin:0 ; 
+    padding: 0 ;
+    box-sizing: border-box ; 
+
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    height:100px ; 
+   
+    display: flex; 
+    justify-content:space-around ; 
+    align-items:center; 
+    border-bottom: 6px solid rgb(116, 103, 103);
+
+}
+
+ul{
+    display:flex  ; 
+    list-style-type: none;
+
+}
+
+ul li a {
+    padding: 0px 20px  ; 
+    text-decoration: none; 
+    color: #3a3a3a; 
+    display:inline-block ; 
+}
+
+li a::after{
+    content:''; 
+    display:block ; 
+    height:4px ; 
+    width:0 ; 
+    background: red;
+    transition: all .2s ease ; 
+
+}
+
+li a:hover::after{
+    width: 100%;
+}
