@@ -150,7 +150,7 @@ div.splash h3 {
 }
 
 
-div.splash form {
+div.cta form {
     position: relative ; 
     display: grid ; 
     margin-top : 20px ; 
@@ -159,7 +159,7 @@ div.splash form {
 
 }
 
-div.splash input{
+div.cta input{
     padding: 15px 10px   ; 
     font-size : 1.2rem  ; 
     width : 100%; 
@@ -168,7 +168,7 @@ div.splash input{
 
 }
 
-div.splash input ~ span{
+div.cta input ~ span{
     position: absolute ; 
     left: 12px ; 
     top: 19px  ; 
@@ -179,19 +179,19 @@ div.splash input ~ span{
     /* to fix thtat issue of when pressing on the text the thing does not move up  */
 }
 
-div.splash input:focus{
+div.cta input:focus{
     padding-top: 19px ;
     padding-bottom: 11px ; 
 
 }
 
 
-div.splash input:focus ~ span{ 
+div.cta input:focus ~ span{ 
     top: 4px ; 
     font-size: 0.8rem ; 
 }
 
-div.splash button{
+div.cta button{
     font-size : 1.625rem  ; 
     padding: 12.5px 26px ; 
     background-color:#e50914;
@@ -306,41 +306,92 @@ div.faq{
 }
 
 div.faq h1{
-    font-size: 3.125rem ; 
+    font-size: 3.125rem;
     text-align:center ; 
+    margin-bottom: 40px;
+
 }
 
 div.questions{
-    max-width:635px ; 
-    margin: 0 auto ; 
+    max-width:635px  ; 
+    margin : 0 auto ; 
+    font-size: 1.625rem ; 
+
 
 }
 
-div.question{ 
-    position:relative ;  
-    background-color:#303030 ; 
-
-}
-
-div.question svg{ 
-    width: 30px ; 
-    height : 25px ; 
-    right: 25px ; 
-    position: absolute; 
-    top : 17px ; 
+div.question{
+    position:relative ; 
+    background-color: #303030 ; 
      
+    margin-bottom: 10px ;
+
+}
+div.question svg {
+
+    width:30px ; 
+    height: 30px ; 
+    right:30px ; 
+    top:20px ; 
+    position : absolute ; 
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+
+
+
 }
 
 div.question .header{
-    display: block; 
-    padding : 20px 30px ; 
-    border-bottom: 1px solid black;
-    cursor : pointer; 
-
+    padding: 20px 30px ; 
+    display:block; 
+    border-bottom: 1px solid  black; 
+    cursor: pointer ; 
 
 
 }
 
+div.question input[type="checkbox"]{
+    display: none ; 
+}
+/* used to hide the checkbox   */
+
+
 div.question div.answer{
-    padding:30px  ; 
+    padding:0 30px ;
+    max-height:0 ; 
+    overflow:hidden ; 
+    transition: all 0.2s ease;
+ 
+
+
+
+}
+div.answer {
+    padding: 20px 20px ; 
+}
+
+
+div.question input[type="checkbox"]:checked ~ div.answer{
+    padding:30px 30px  ;
+    max-height:600px ; 
+
+}
+
+
+div.question input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(180deg);
+
+}
+
+div.faq form{
+    max-width: 600px;
+    margin : 0 auto ;
+
+}
+
+div.faq h3{
+    font-weight: normal;
+    text-align:center;
+    margin: 40px 0 20px ; 
+    
 }
