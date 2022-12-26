@@ -36,3 +36,31 @@ implemented z index
 
 Today I'd spent most of my time on learning and understanding how everything fits together and started off with the website clone. 
 I have updated the first page of Netflix in the GitHub repo. 
+
+
+
+### Day 2 
+ 
+Today I worked completely on finishing the clone website of Netflix using HTML and  CSS and changed some of the codes that I'd made yesterday as I deleted the images folded and started using the website's own source as the image source.   I've completed the front pages as well as the 4 pages below it, only the Faq Part is remaining( which is taking time to do since I am only using CSS, for the pop-up options, within 3-4 hours I should be able to finish that also ). 
+I also spent some time learning and troubleshooting git, since I was having errors while pushing my repo( i had to clone the repo from GitHub again locally and then push it) -> now I have understood the reason and have fixed it. 
+
+The following as the things that I learned and implemented today : 
+Displaying images directly from the website being cloned rather than downloading and then referencing it as I'd done while coding yesterday. 
+Understanding and implementing viewport meta tag. 
+Implementing logo from heroicons
+Using gradient to give shadows to an image 
+Z-index 
+understood how section tag can be used to prevent code from being rewritten and its advantages over div 
+Learned to display videos in websites and also how to use loop and other functionalities 
+Using the idea of input and labels to simulate drop-down column.
+understood when + and ~ is used while declaring in the css
+how to remove the underline from hyperlink 
+the working of border-radius and padding and how it together is implemented in making containers 
+learned about inset in css 
+things like font weight and why rem is used instead of px 
+use of grid and grid template 
+use of transition while on click with the cursor 
+changing the cursor type while hovering the mouse over it. ( pointer event) 
+change the position of the text while focused ( along with transition ) 
+understood about the different way to call the parent and the child classes. 
+how to change the position of the text to the right side in even intervals of a section using the idea of order and nth child 
