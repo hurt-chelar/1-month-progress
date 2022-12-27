@@ -64,3 +64,21 @@ changing the cursor type while hovering the mouse over it. ( pointer event)
 change the position of the text while focused ( along with transition ) 
 understood about the different way to call the parent and the child classes. 
 how to change the position of the text to the right side in even intervals of a section using the idea of order and nth child 
+
+
+### Day 3 
+Today I finished the Netflix clone that I was building using HTML and CSS( The last page where CSS along with input and label was used to simulate the function of a dropdown box ) and started learning flex box and tailwind CSS. I've started to build a simple website front page using flexbox today( header completed) 
+
+The following are the things that I learned and implemented today :
+Referencing the classes with similar names and different suffixes 
+Using the input type condition to check if a checkbox is checked or not and to hide the container with condition( using only css) 
+ Using the idea of rotation to rotate svg elements along with the transition. 
+The difference and implementation between grid and flex. 
+Understanding and implementing the idea of media query to have different css features at different display sizes 
+To hide the contents using the idea of overflow  and to overlap images using z-index
+used lorem to fill text 
+Understood and implemented flex properties like flex-start , flex-end , flex-direction , justify-content , flex-wrap and  also made a sample doc implementing this. 
+Implemented flex and order
+Got to know about google fonts and how it can be implemented to give any font that we want.
+Making of pseudo-elements and  animating line transitions on hover of mouse over links 
+
