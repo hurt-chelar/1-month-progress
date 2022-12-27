@@ -10,6 +10,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  background:black ; 
+
   
 }
 
@@ -22,6 +24,10 @@ body{
     width:2em ; 
     background:green ; 
     position:absolute; 
+    top:0 ; 
+    bottom:0 ; 
+    box-shadow:  0 0 0 2em green inset,
+                0 0 50px 10px blue  ; 
 
 }
 
