@@ -6,26 +6,203 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="
-    
-        mx-auto
-        text-neutral-900
-        dark:text-neutral-200
-                ">
-   <nav class="mx-auto p-4 bg-amber-400">
+<body>
+    <!-- <h1 class="bg-green-500">Hello Tailwind</h1> -->
 
-    <div class="container
-                mx-auto
-                flex 
-                items-center
-                justify-between">
+    <nav class="relative container mx-auto p-6">
 
-                <a href="/" aria-label="Go to homepage">
-                    <img src="assets/logo.svg" width="200"
-                    class="w-48 md:w-64 lg:w-72 align-text-top"  > 
-                </a>
+      <div class="flex items-center justify-between">
+        <div class="pt-2">
+          <img src="/img/logo.svg" alt="" />
+        </div>
 
-    </div>
-   </nav>
+
+        <div class="hidden space-x-6 md:flex">
+          <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Product</a>
+          <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+        </div>
+        
+        
+        
+        <a href="#" class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">
+            Get Started</a>
+        <button id="menu-btn" class="
+        block hamburger md:hidden focus:outline-none">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="
+          absolute 
+          flex-col 
+          items-center 
+          hidden 
+          self-end
+             py-8 mt-10
+             space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 
+             right-6 drop-shadow-md">
+
+
+
+          <a href="#">Pricing</a>
+          <a href="#">Product</a>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Community</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="
+        container flex flex-col-reverse 
+        items-center px-6
+        mx-auto mt-10 space-y-0 
+        md:space-y-0
+        md:flex-row">
+
+
+        <div class="
+                  flex 
+                  flex-col 
+                  mb-32 space-y-12 md:w-1/2">
+          <h1 class="
+          max-w-md 
+          text-4xl font-bold 
+          text-center 
+          md:text-5xl md:text-left">
+            Bring everyne together to build better products
+          </h1>
+
+          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem hic animi, dolore consequatur nam eaque?
+          </p>
+          <div class="flex justify-center md:justify-start">
+            <a href="#" class=
+            "p-3 px-6 pt-2 text-white bg-brightRed 
+            rounded-full
+            baseline
+            hover:bg-brightRedLight">
+             Get Started
+             </a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img src="/img/illustration-intro.svg" alt="Not Working" />
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div
+        class="
+        container
+        flex 
+        flex-col px-4 mx-auto mt-10 space-y-12 
+        md:space-y-0 md:flex-row">
+        <div class="flex flex-col space-y-12 md:w-1/2">
+          <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
+            What's different about Manage?
+          </h2>
+          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cum rerum officia sint aliquid accusamus aperiam itaque iusto commodi corrupti!
+          </p>
+        </div>
+
+        <div class="
+        flex 
+        flex-col space-y-8 
+        md:w-1/2">
+          <div class="flex
+          flex-col
+          space-y-3 
+          md:space-y-0 md:space-x-6 md:flex-row">
+            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+              <div class="flex items-center space-x-2">
+            <div class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed">
+                  01
+            </div>
+            <h3 class="text-base font-bold md:mb-4 md:hidden">
+                Track company-wide progress
+            </h3>
+            </div>
+            </div>
+
+            <div>
+              <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Track company-wide progress
+              </h3>
+              <p class="text-darkGrayishBlue">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perspiciatis quidem, temporibus dicta quas rem quasi soluta molestias maxime praesentium architecto voluptas nostrum numquam cum iste molestiae alias asperiores nemo.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="
+            flex 
+            flex-col space-y-3 
+            md:space-y-0 md:space-x-6 md:flex-row">
+            <div class="
+            rounded-l-full 
+            bg-brightRedSupLight 
+            md:bg-transparent">
+            <div class="flex items-center space-x-2">
+                <div class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed">
+                    02
+                </div>
+                <h3 class="text-base font-bold md:mb-4 md:hidden">
+                  Advanced built-in reports
+                </h3>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Advanced built-in reports
+              </h3>
+              <p class="text-darkGrayishBlue">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nesciunt reprehenderit illum tempore modi, veniam reiciendis labore. Sint, ipsa minima?
+              </p>
+            </div>
+          </div>
+
+          <div class="flex
+          flex-col 
+          space-y-3 
+          md:space-y-0 
+          md:space-x-6 
+          md:flex-row">
+            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+              <div class="flex items-center space-x-2">
+                <div class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed">
+                  03
+                </div>
+                <h3 class="text-base font-bold md:mb-4 md:hidden">
+                  Everything you need in one place
+                </h3>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Everything you need in one place
+              </h3>
+              <p class="text-darkGrayishBlue">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quas itaque ipsam repellendus exercitationem excepturi rem aspernatur nulla quae ut modi, veniam soluta, libero dolorum ea quibusdam provident eligendi cum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 </body>
 </html>
