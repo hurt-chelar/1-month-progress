@@ -1,0 +1,12 @@
+
+
+@media(min-width:768px)
+{
+
+    .news-input{
+        width:50%  ; 
+
+        /* this reduced the space of the email input in smaller screens */
+    }
+
+}
