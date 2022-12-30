@@ -962,6 +962,10 @@ body{
   display: none ;
 }
 
+.first-letter\:flex-col::first-letter {
+  flex-direction: column;
+}
+
 .hover\:bg-brightRedLight:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(12 88% 69% / var(--tw-bg-opacity));
