@@ -1,10 +1,6 @@
-
-
-const todoInput = document.querySelector(".todo-input"); 
-const todoButton = document.querySelector(".todo-button"); 
-const todoList = document.querySelector(".todo-list"); 
-
-
+const todoInput = document.querySelector(".todo-input");
+const todoButton = document.querySelector(".todo-button");
+const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 
@@ -125,9 +121,6 @@ function saveLocalTodos(todo) {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-
-
-
 function removeLocalTodos(todo) {
   let todos;
   if (localStorage.getItem("todos") === null) {
@@ -139,3 +132,7 @@ function removeLocalTodos(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
+function getTodos() {
+    
+} 
