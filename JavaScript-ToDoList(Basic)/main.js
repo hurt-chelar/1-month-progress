@@ -1,44 +1,141 @@
 
 
-const todoInput = document.querySelector('.todo-input'); 
-const todoButton = document.querySelector('.todo-button'); 
-const todoList = document.querySelector('.todo-list'); 
+const todoInput = document.querySelector(".todo-input"); 
+const todoButton = document.querySelector(".todo-button"); 
+const todoList = document.querySelector(".todo-list"); 
+
+
+const filterOption = document.querySelector(".filter-todo");
+
+
+
+document.addEventListener("DOMContentLoaded", getTodos);
 
 
 todoButton.addEventListener('click',addToDo) ; 
+todoList.addEventListener('click',deleteCheck ) ; 
+filterOption.addEventListener("click", filterTodo);
+
+
+
 
 function addToDo(event){
-    event.preventDefault(); 
-    // This prevents the form from busbmitting
-    console.log("hello") ; 
+    event.preventDefault();
+    console.log('hello'); 
 
-
-    const todoDiv= document.createElement('div');
+    const todoDiv = document.createElement('div') ; 
     todoDiv.classList.add('todo'); 
 
-    const newTodo=document.createElement('li');
-    newTodo.innerText='hey'; 
+
+    const  newTodo = document.createElement('li');
+    newTodo.innerText = todoInput.value ; 
+
 
     newTodo.classList.add('todo-item'); 
 
     todoDiv.appendChild(newTodo);
-    
-    todoInput.value = "";
-    const completedButton = document.createElement("button");
-
-    completedButton.innerHTML = '<i class="fas fa-check"></i>';
-    completedButton.classList.add("complete-btn");
-
-    todoDiv.appendChild(completedButton);
 
 
-    const trashButton = document.createElement("button");
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
 
 
-    trashButton.classList.add("trash-btn");
-    todoDiv.appendChild(trashButton);
+    const completedButton = document.createElement('button'); 
+    completedButton.innerHTML = '<i class="fas fa-check"></i> ' ;
+    completedButton.classList.add('complete-btn'); 
 
-    todoList.appendChild(todoDiv);
+    todoDiv.appendChild(completedButton); 
 
+    const trash = document.createElement('button'); 
+    trash.innerHTML = '<i class="fas fa-trash"></i> ' ;
+    trash.classList.add('trash-btn'); 
+
+    todoDiv.appendChild(trash); 
+
+
+    todoList.appendChild(todoDiv) ; 
+
+    todoInput.value='' ;    
+
+}
+
+
+
+
+
+function deleteCheck(event){
+    console.log(event.target);
+
+    const item = event.target; 
+    if(item.classList[0]=== 'trash-btn'){
+        const todo = item.parentElement ; 
+        todo.classList.add('Fall') ; 
+        // todo.remove(); 
+
+        todo.addEventListener('transitionend',function(){
+            todo.remove() ; 
+        });
+
+
+    }
+
+    if(item.classList[0]=== 'complete-btn'){
+
+        const todo = item.parentElement ;
+        todo.classList.toggle('completed'); 
+        // i used toggle since in only wanted to add this into it 
+
+    }
+}
+
+
+
+function filterTodo(e) {
+  const todos = todoList.childNodes;
+  todos.forEach(function(todo) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+      case "uncompleted":
+        if (!todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+    }
+  });
+}
+
+
+
+function saveLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.push(todo);
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+
+
+
+function removeLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  const todoIndex = todo.children[0].innerText;
+  todos.splice(todos.indexOf(todoIndex), 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
