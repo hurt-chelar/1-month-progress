@@ -3,6 +3,8 @@ import DigitButton from "./DigitButton"
 import OperationButton from "./OperationButton"
 import "./index.css"
 
+
+
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
   CHOOSE_OPERATION: "choose-operation",
@@ -10,6 +12,7 @@ export const ACTIONS = {
   DELETE_DIGIT: "delete-digit",
   EVALUATE: "evaluate",
 }
+
 
 function reducer(state, { type, payload }) {
   switch (type) {
@@ -97,7 +100,10 @@ function reducer(state, { type, payload }) {
   }
 }
 
-function evaluate({ currentOperand, previousOperand, operation }) {
+
+
+function evaluate({ currentOperand, previousOperand, operation }) 
+{
   const prev = parseFloat(previousOperand)
   const current = parseFloat(currentOperand)
   if (isNaN(prev) || isNaN(current)) return ""
@@ -123,6 +129,7 @@ function evaluate({ currentOperand, previousOperand, operation }) {
 const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
   maximumFractionDigits: 0,
 })
+
 function formatOperand(operand) {
   if (operand == null) return
   const [integer, decimal] = operand.split(".")
@@ -130,7 +137,8 @@ function formatOperand(operand) {
   return `${INTEGER_FORMATTER.format(integer)}.${decimal}`
 }
 
-function App() {
+function App() 
+{
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
     {}
@@ -144,10 +152,7 @@ function App() {
         </div>
         <div className="current-operand">{formatOperand(currentOperand)}</div>
       </div>
-      <button
-        className="span-two"
-        onClick={() => dispatch({ type: ACTIONS.CLEAR })}
-      >
+      <button className="span-two" onClick={() => dispatch({ type: ACTIONS.CLEAR })}>
         AC
       </button>
       <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>
@@ -169,9 +174,7 @@ function App() {
       <DigitButton digit="." dispatch={dispatch} />
       <DigitButton digit="0" dispatch={dispatch} />
       <button
-        className="span-two"
-        onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
-      >
+        className="span-two" onClick={() => dispatch({ type: ACTIONS.EVALUATE })}>
         =
       </button>
     </div>
